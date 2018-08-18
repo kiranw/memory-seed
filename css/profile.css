@@ -61,7 +61,6 @@ body {
     font-size: 2em;
     padding-top:20%;
     padding-bottom:10%;
-    font-size: 0.8em;
 
     /*padding: 5% 5% 10% 10%;*/
 }
@@ -131,7 +130,7 @@ a:hover {
 
 .sotoba {
     font-family: 'Computer Modern Serif';
-    font-size: 1.4em;
+    font-size: 1.7em;
 }
 
 .lock {
