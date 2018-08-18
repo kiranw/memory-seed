@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3129e92e-13af-4641-902f-3c1a29913e28" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/profile.css" afterPath="$PROJECT_DIR$/css/profile.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -16,12 +16,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="15" column="8" lean-forward="false" selection-start-line="13" selection-start-column="4" selection-end-line="15" selection-end-column="8" />
-              <folding />
+            <state relative-caret-position="255">
+              <caret line="17" column="94" lean-forward="false" selection-start-line="17" selection-start-column="94" selection-end-line="17" selection-end-column="94" />
+              <folding>
+                <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -49,7 +51,7 @@
       <file leaf-file-name="profile.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/profile.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="348">
+            <state relative-caret-position="837">
               <caret line="247" column="12" lean-forward="false" selection-start-line="247" selection-start-column="12" selection-end-line="247" selection-end-column="12" />
               <folding>
                 <element signature="n#style#0;n#img#0;n#div#0;n#body#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -81,11 +83,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="profile.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="profile.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/profile.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="361">
-              <caret line="54" column="0" lean-forward="true" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
+            <state relative-caret-position="765">
+              <caret line="51" column="0" lean-forward="true" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -120,9 +122,9 @@
         <option value="$PROJECT_DIR$/Location Map | GSD Tokyo Workshop.html" />
         <option value="$PROJECT_DIR$/memory01.html" />
         <option value="$PROJECT_DIR$/css/style.css" />
-        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/profile.html" />
         <option value="$PROJECT_DIR$/css/profile.css" />
+        <option value="$PROJECT_DIR$/index.html" />
       </list>
     </option>
   </component>
@@ -220,12 +222,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1534522725361</updated>
-      <workItem from="1534522726776" duration="12566000" />
+      <workItem from="1534522726776" duration="12709000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12566000" />
+    <option name="totallyTimeSpent" value="12709000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="362" y="23" width="1078" height="805" extended-state="0" />
@@ -311,17 +313,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
+    <entry file="file://$PROJECT_DIR$/css/profile.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="8" lean-forward="false" selection-start-line="13" selection-start-column="4" selection-end-line="15" selection-end-column="8" />
+        <state relative-caret-position="765">
+          <caret line="51" column="0" lean-forward="true" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/profile.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="348">
+        <state relative-caret-position="837">
           <caret line="247" column="12" lean-forward="false" selection-start-line="247" selection-start-column="12" selection-end-line="247" selection-end-column="12" />
           <folding>
             <element signature="n#style#0;n#img#0;n#div#0;n#body#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -329,11 +331,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/profile.css">
+    <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="54" column="0" lean-forward="true" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="255">
+          <caret line="17" column="94" lean-forward="false" selection-start-line="17" selection-start-column="94" selection-end-line="17" selection-end-column="94" />
+          <folding>
+            <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
