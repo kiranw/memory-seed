@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MemorySeed | GSD Tokyo Workshop Demo</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script
+            src="https://code.jquery.com/jquery-3.3.1.js"
+            integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+            crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
+</head>
+<body>
+    <div id="loader">
+        <div id="loading-gif"><img src="img/dna_loading.gif"></div>
+        <div id="loading-text"></div>
+    </div>
+
+    <script>
+    var typed = new Typed('#loading-text', {
+        strings: ['Looking for matches...', 'Looking for the memory...', 'Retrieving your memory...', 'enter to see the memory'],
+        typeSpeed: 30,
+        backSpeed: 30,
+        backDelay: 1000,
+        startDelay: 1000,
+        smartBackspace: true, // this is a default
+        loop: false,
+        fadeOut: true
+    });
+
+    setTimeout(function () {
+        $("#loading-gif").html("<a id='enter-button' href='memory01.html'><img src='img/button.jpg'></a>");
+    }, 12000);
+
+    </script>
+</body>
+</html>

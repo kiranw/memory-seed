@@ -1,0 +1,44 @@
+body {
+    font-family:'Apercu';
+}
+
+#loader {
+    height: 100%;
+    width: 100%;
+    background: black;
+    color: white;
+    text-align: center;
+    font-size: 3em;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#loading-text {
+}
+
+.typed-cursor {
+    visibility: hidden;
+}
+
+#p-header {
+    font-size: 3em;
+}
+
+span > .underline {
+    text-decoration: underline;
+}
+
+a {
+    color: white !important;
+    opacity: 0.7;
+}
+
+a:hover {
+    color: white !important;
+    opacity: 0.5;
+}
+
+.sotoba {
+    font-family: 'CMU Serif';
+}

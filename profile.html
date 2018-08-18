@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>In Loving Memory</title>
+    <link rel="stylesheet" type="text/css" href="css/profile.css">
+    <script
+            src="https://code.jquery.com/jquery-3.3.1.js"
+            integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+            crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="p-header-1">In loving memory of</div>
+    <a id="p-header" href="profile.html">Isao Takahata</a></div>
+    <br><br>
+    <img src="img/takahata.jpg">
+    <br><br><br>
+    <div class="sotoba">January 5, 1941 - April 6, 2018</div>
+    <div class="sotoba">from Ujiyamada, Japan</div>
+    <div class="sotoba">Film director, screenwriter, producer</div>
+    <br><br><br>
+    <hr>
+    <br><br><br><br>
+    <h2>Remembering Isao Takahata</h2>
+    <br>
+    <p>Isao Takahata, a film director who founded Japan’s premier animation studio, Studio Ghibli, with Hayao Miyazaki in 1985 and made sophisticated animated films like the elegiac World War II drama “Grave of the Fireflies,” died early Thursday in Tokyo. He was 82.
+    </p>
+
+    <p>The cause was lung cancer, Studio Ghibli said in a statement.</p>
+
+    <p>Studio Ghibli has released some of the highest-grossing anime films ever, like “Ponyo,” “Howl’s Moving Castle,” “Princess Mononoke” and “Spirited Away,” which won an Academy Award for best animated feature in 2003 after an English version was released.</p>
+
+    <p>These lushly animated fairy tales were all written and directed by Mr. Miyazaki, whose name is more recognizable to international animation aficionados than that of Mr. Takahata.</p>
+
+    <p>Many of Mr. Takahata’s movies were popular, particularly in Japan, and many critics praised his work, especially “Grave of the Fireflies” (1988), a harrowing tale of a brother and sister trying to survive after Japan is devastated by American firebombing during World War II.</p>
+
+    <br>
+    <br>
+    <h2>Memories of Isao</h2>
+    <br>
+    <a href="/">6, April 2018</a><img src="img/lock.png" class="lock"> (Locked)<br>
+    <a href="/">8, April 2018</a><img src="img/lock.png" class="lock"> (Locked)<br>
+    <a href="memory01.html">21, April 2018</a><br>
+    <a href="memory01.html">23, April 2018</a><br>
+    <br>
+    <br>
+
+    <br><br>
+    <h2>Takahata Family Lineage</h2>
+    <body>
+    <script src="https://d3js.org/d3.v3.js" charset="utf-8"></script>
+    <script>
+
+        var margin = {top: 100, right: 50, bottom: 100, left: 50},
+            width = $(window).width() - margin.left - margin.right,
+            height = $(window).height()*0.5 - margin.top - margin.bottom;
+
+        var tree = d3.layout.tree()
+            .separation(function(a, b) { return a.parent === b.parent ? 1 : 1.2; })
+            .children(function(d) { return d.parents; })
+            .size([width, height]);
+
+        var svg = d3.select("body")
+            .append("svg")
+            .attr("width", width + margin.left + margin.right)
+            .attr("height", height + margin.top + margin.bottom)
+            .append("g")
+            .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+        var nodes = tree.nodes(getData());
+
+        var node = svg.selectAll(".node")
+            .data(nodes)
+            .enter()
+            .append("g");
+
+        node.append("rect")
+            .attr("width", 150)
+            .attr("height", 90)
+            .attr("fill", function(d, i) {
+                if (i==0) {
+                    return "#284245";
+                }
+                return "tan";
+            })
+            .attr("x", function(d) { return d.x - 75; })
+            .attr("y", function(d) { return height - d.y - 45; })
+            .on("mouseover", handleMouseOver)
+            .on("mouseout", handleMouseOut);
+
+        function handleMouseOver(d,i) {
+            d3.select(this)
+                .transition()
+                .duration(200)
+                .attr("opacity", 0.8)
+                .attr("width", 200)
+                .attr("height", 130)
+                .attr("x", function(d){ return d.x-100;})
+                .attr("y", function(d){ return height - d.y - 65;})
+        }
+
+        function handleMouseOut(d, i) {
+            d3.select(this)
+                .attr("opacity", 1)
+                .attr("x", function(d) { return d.x - 75; })
+                .attr("y", function(d) { return height - d.y - 45; })
+                .attr("width", 150)
+                .attr("height", 90);
+        }
+
+        function handleTextMouseOver(d,i) {
+            d3.select(this)
+                .transition()
+                .duration(200)
+                .attr("font-size", "20px")
+        }
+
+        function handleTextMouseOut(d, i) {
+            d3.select(this)
+                .transition()
+                .duration(200)
+                .attr("font-size", "16px")
+        }
+
+        node.append("text")
+            .attr("font-size", "16px")
+            .attr("font-weight", "700")
+            .attr("fill", function(d, i) {
+                if (i==0) {
+                    return "white";
+                }
+                return "#284245";
+            })
+            .attr("x", function(d) { return d.x; })
+            .attr("y", function(d) { return height - d.y - 15; })
+            .style("text-anchor", "middle")
+            .text(function(d) { return d.name; })
+            .on("mouseover", handleTextMouseOver)
+            .on("mouseout", handleTextMouseOut);;
+
+        node.append("text")
+            .attr("font-size", "12px")
+            .attr("fill", function(d, i) {
+                if (i==0) {
+                    return "white";
+                }
+                return "#284245";
+            })
+            .attr("x", function(d) { return d.x; })
+            .attr("y", function(d) { return 10 + height - d.y; })
+            .style("text-anchor", "middle")
+            .text(function(d) { return d.born + "–" + d.died; });
+
+        node.append("text")
+            .attr("font-size", "11px")
+            .attr("fill", function(d, i) {
+                if (i==0) {
+                    return "white";
+                }
+                return "#284245";
+            })
+            .attr("x", function(d) { return d.x; })
+            .attr("y", function(d) { return 28 + height - d.y; })
+            .style("text-anchor", "middle")
+            .text(function(d) { return d.location; });
+
+        var link = svg.selectAll(".link")
+            .data(tree.links(nodes))
+            .enter()
+            .insert("path", "g")
+            .attr("fill", "none")
+            .attr("stroke", "#000")
+            .attr("stroke", "#000")
+            .attr("shape-rendering", "crispEdges")
+            .attr("d", connect);
+
+        function connect(d, i) {
+            return     "M" + d.source.x + "," + (height - d.source.y)
+                + "V" + (height - (3*d.source.y + 4*d.target.y)/7)
+                + "H" + d.target.x
+                + "V" + (height - d.target.y);
+        };
+
+
+        function getData() {
+            return {
+                "name": "Isao Takahata",
+                "born": 1941,
+                "died": 2018,
+                "location": "Mie Prefecture, Ujiyamada",
+                "parents": [
+                    {
+                        "name": "Asajiro Takahata",
+                        "born": 1888,
+                        "died": 1984,
+                        "location": "Okayama Prefecture",
+                        "parents": [
+                            {
+                                "name": "Information N/A",
+                                "born": "n/a",
+                                "died": "n/a",
+                                "location": "n/a"
+                            },
+                            {
+                                "name": "Information N/A",
+                                "born": "n/a",
+                                "died": "n/a",
+                                "location": "n/a"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Information N/A",
+                        "born": "n/a",
+                        "died": "n/a",
+                        "location": "n/a",
+                        "parents": [
+                            {
+                                "name": "Information N/A",
+                                "born": "n/a",
+                                "died": "n/a",
+                                "location": "n/a"
+                            },
+                            {
+                                "name": "Information N/A",
+                                "born": "n/a",
+                                "died": "n/a",
+                                "location": "n/a"
+                            }
+                        ]
+                    }
+                ]
+            };
+        };
+    </script>
+    <br><br>
+
+
+    <h2>Obituary</h2>
+    <br>
+    <p>Isao Takahata, a film director who founded Japan’s premier animation studio, Studio Ghibli, with Hayao Miyazaki in 1985 and made sophisticated animated films like the elegiac World War II drama “Grave of the Fireflies,” died early Thursday in Tokyo. He was 82.
+    </p>
+
+    <p>The cause was lung cancer, Studio Ghibli said in a statement.</p>
+
+    <p>Studio Ghibli has released some of the highest-grossing anime films ever, like “Ponyo,” “Howl’s Moving Castle,” “Princess Mononoke” and “Spirited Away,” which won an Academy Award for best animated feature in 2003 after an English version was released.</p>
+
+    <p>These lushly animated fairy tales were all written and directed by Mr. Miyazaki, whose name is more recognizable to international animation aficionados than that of Mr. Takahata.</p>
+
+    <p>Many of Mr. Takahata’s movies were popular, particularly in Japan, and many critics praised his work, especially “Grave of the Fireflies” (1988), a harrowing tale of a brother and sister trying to survive after Japan is devastated by American firebombing during World War II.</p>
+
+<br>
+
+</body>
+</html>

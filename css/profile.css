@@ -1,0 +1,86 @@
+body {
+    font-family:'Apercu';
+    /*background: #a0c1b8;*/
+    background: -webkit-linear-gradient(top, #a0c1b8 0%,#709fb0 100%);
+    color: white;
+    font-size: 2em;
+    padding-top:10%;
+    padding-bottom:10%;
+
+    /*padding: 5% 5% 10% 10%;*/
+}
+
+p {
+    font-family: 'CMU Serif';
+    width: 80%;
+    padding-left:10%;
+    padding-right:10%;
+}
+
+div, a, h2, h3 {
+    width: 80%;
+    padding-left:10%;
+    padding-right:10%;
+}
+
+#loader {
+    height: 100%;
+    width: 100%;
+    background: black;
+    color: white;
+    text-align: center;
+    font-size: 3em;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#loading-text {
+}
+
+.typed-cursor {
+    visibility: hidden;
+}
+
+#p-header-1 {
+    font-size:1em;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    font-weight: 800;
+}
+
+#p-header {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+}
+
+img {
+    width: 100%;
+}
+
+
+span > .underline {
+    text-decoration: underline;
+}
+
+a {
+    color: white !important;
+    opacity: 0.7;
+}
+
+a:hover {
+    color: white !important;
+    opacity: 0.5;
+}
+
+.sotoba {
+    font-family: 'CMU Serif';
+}
+
+.lock {
+    width: 20px;
+    height: auto;
+    padding-left: 30px;
+    opacity: 0.7;
+    margin-right:10px;
+}
